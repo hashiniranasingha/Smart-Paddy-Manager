@@ -1,0 +1,584 @@
+ /* =========================================================
+   PADDY FIELD MANAGEMENT SYSTEM
+   PROFESSIONAL NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e2ebe4;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  box-shadow:
+    0 3px 15px rgba(35, 75, 45, 0.06);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 25px;
+}
+
+
+.logo-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  color: #1d5b32;
+}
+
+
+.logo-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 43px;
+  height: 43px;
+
+  border-radius: 12px;
+
+  background: #edf7ef;
+
+  font-size: 24px;
+
+  box-shadow:
+    inset 0 0 0 1px #dcecdf;
+}
+
+
+.logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+
+.logo-text strong {
+  color: #1c5630;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.2px;
+}
+
+
+.logo-text span {
+  margin-top: 3px;
+
+  color: #7b887f;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.navbar-links {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  min-width: 0;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+
+.navbar-links::-webkit-scrollbar {
+  display: none;
+}
+
+
+.navbar-link {
+  position: relative;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  color: #536158;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.navbar-link:hover {
+  background: #eef7f0;
+
+  color: #26703b;
+
+  transform: translateY(-1px);
+}
+
+
+.navbar-link.active {
+  background: #e3f1e6;
+
+  color: #216a36;
+
+  font-weight: 750;
+}
+
+
+/* Active bottom indicator */
+
+.navbar-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 3px;
+
+  width: 18px;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 10px;
+
+  background: #2f7d43;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.navbar-right {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: 20px;
+}
+
+
+/* =========================================================
+   USER AREA
+========================================================= */
+
+.navbar-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 6px 10px;
+
+  border: 1px solid #e3ebe5;
+
+  border-radius: 11px;
+
+  background: #f8fbf8;
+}
+
+
+.user-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 9px;
+
+  background: #e7f3e9;
+
+  font-size: 16px;
+}
+
+
+.user-info {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 65px;
+
+  max-width: 110px;
+}
+
+
+.user-name {
+  overflow: hidden;
+
+  color: #244c30;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+.user-role {
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: #849087;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  text-transform: capitalize;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-button {
+  border: 1px solid #dce7df;
+
+  padding: 9px 14px;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #4d5c52;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.logout-button:hover {
+  border-color: #e1bcbc;
+
+  background: #fff5f5;
+
+  color: #a33d3d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.login-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 72px;
+
+  padding: 10px 16px;
+
+  border-radius: 9px;
+
+  background: #2f7b42;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  box-shadow:
+    0 5px 12px rgba(47, 123, 66, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.login-button:hover {
+  background: #256735;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 15px rgba(47, 123, 66, 0.25);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .navbar {
+    padding: 0 20px;
+  }
+
+
+  .navbar-logo {
+    margin-right: 15px;
+  }
+
+
+  .logo-text strong {
+    font-size: 14px;
+  }
+
+
+  .navbar-link {
+    padding: 8px 8px;
+
+    font-size: 11px;
+  }
+
+
+  .navbar-right {
+    margin-left: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    min-height: auto;
+
+    padding: 12px 18px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+
+  .navbar-logo {
+    margin-right: auto;
+  }
+
+
+  .navbar-right {
+    margin-left: 0;
+  }
+
+
+  .navbar-links {
+    order: 3;
+
+    flex-basis: 100%;
+
+    width: 100%;
+
+    padding-bottom: 3px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    padding: 10px 14px;
+  }
+
+
+  .logo-icon {
+    width: 39px;
+    height: 39px;
+
+    font-size: 21px;
+  }
+
+
+  .logo-text strong {
+    font-size: 13px;
+  }
+
+
+  .logo-text span {
+    font-size: 9px;
+  }
+
+
+  .navbar-user {
+    padding: 5px 7px;
+  }
+
+
+  .user-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .user-info {
+    display: none;
+  }
+
+
+  .logout-button {
+    padding: 8px 11px;
+
+    font-size: 11px;
+  }
+
+
+  .navbar-links {
+    gap: 3px;
+
+    overflow-x: auto;
+  }
+
+
+  .navbar-link {
+    min-height: 35px;
+
+    padding: 7px 9px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .navbar {
+    padding: 9px 10px;
+  }
+
+
+  .logo-text {
+    display: none;
+  }
+
+
+  .navbar-logo {
+    margin-right: auto;
+  }
+
+
+  .navbar-right {
+    gap: 6px;
+  }
+
+
+  .logout-button {
+    padding: 7px 9px;
+  }
+
+
+  .navbar-links {
+    margin-top: 2px;
+  }
+
+
+  .navbar-link {
+    padding: 7px 8px;
+
+    font-size: 10px;
+  }
+
+}

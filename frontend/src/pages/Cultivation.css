@@ -1,0 +1,1128 @@
+
+/* =========================================================
+   CULTIVATION MANAGEMENT
+   Professional Dashboard-Style UI
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.cultivation-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f5f7f5;
+  box-sizing: border-box;
+  color: #26332a;
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.cultivation-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 190px;
+  padding: 35px 42px;
+  margin-bottom: 28px;
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #1b5e20 0%,
+      #2e7d32 48%,
+      #43a047 100%
+    );
+  box-shadow:
+    0 10px 30px rgba(46, 125, 50, 0.18);
+  box-sizing: border-box;
+}
+
+.cultivation-hero::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: 80px;
+  top: -150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cultivation-hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -60px;
+  bottom: -140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cultivation-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.hero-icon {
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 40px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.hero-label {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.cultivation-hero h1 {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cultivation-hero p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero-decoration {
+  position: relative;
+  z-index: 2;
+  padding-right: 25px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 82px;
+  line-height: 1;
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.cultivation-stats {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.cultivation-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 105px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e7ece7;
+  border-radius: 16px;
+  box-shadow:
+    0 5px 18px rgba(30, 60, 35, 0.06);
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cultivation-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 25px rgba(30, 60, 35, 0.1);
+}
+
+.stat-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: #e8f5e9;
+  font-size: 27px;
+}
+
+.planned-icon {
+  background: #fff8e1;
+}
+
+.growing-icon {
+  background: #e8f5e9;
+}
+
+.ready-icon {
+  background: #f1f8e9;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-info span {
+  color: #718078;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.stat-info strong {
+  color: #26332a;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   COMMON CARD
+   ========================================================= */
+
+.cultivation-card {
+  margin-bottom: 28px;
+  padding: 26px;
+  background: #ffffff;
+  border: 1px solid #e6ebe6;
+  border-radius: 18px;
+  box-shadow:
+    0 5px 20px rgba(30, 60, 35, 0.06);
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf0ed;
+}
+
+.card-title-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.section-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #e8f5e9;
+  font-size: 22px;
+}
+
+.card-title-area h2 {
+  margin: 0 0 4px;
+  color: #26332a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card-title-area p {
+  margin: 0;
+  color: #7a877e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.editing-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #fff8e1;
+  color: #8a6d1d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.cultivation-form {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #3b4940;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group label span {
+  margin-left: 3px;
+  color: #d32f2f;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dce4dd;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcfb;
+  color: #26332a;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  min-height: 45px;
+}
+
+.form-group textarea {
+  min-height: 105px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0aaa3;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #b9c9bc;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #43a047;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM BUTTONS
+   ========================================================= */
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  grid-column: 1 / -1;
+  padding-top: 4px;
+}
+
+.btn-primary,
+.btn-secondary {
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.btn-primary {
+  background: #2e7d32;
+  color: #ffffff;
+  box-shadow:
+    0 4px 10px rgba(46, 125, 50, 0.18);
+}
+
+.btn-primary:hover {
+  background: #256b29;
+  transform: translateY(-1px);
+  box-shadow:
+    0 7px 15px rgba(46, 125, 50, 0.24);
+}
+
+.btn-secondary {
+  background: #eef2ef;
+  color: #4c5b51;
+}
+
+.btn-secondary:hover {
+  background: #e1e7e2;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SEARCH / FILTER
+   ========================================================= */
+
+.filter-card {
+  padding-bottom: 24px;
+}
+
+.filter-header {
+  margin-bottom: 20px;
+}
+
+.clear-filter-btn {
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid #dce4dd;
+  border-radius: 9px;
+  background: #f8faf8;
+  color: #526158;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.clear-filter-btn:hover {
+  background: #edf4ee;
+  border-color: #b9cbbd;
+}
+
+.filter-controls {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) 230px;
+  gap: 18px;
+  align-items: end;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  z-index: 1;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.search-box input {
+  width: 100%;
+  min-height: 45px;
+  padding: 11px 14px 11px 42px;
+  border: 1px solid #dce4dd;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcfb;
+  color: #26332a;
+  font-family: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: #a0aaa3;
+}
+
+.search-box input:focus {
+  border-color: #43a047;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.1);
+}
+
+.status-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-filter label {
+  color: #3b4940;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-filter select {
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 14px;
+  border: 1px solid #dce4dd;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfcfb;
+  color: #26332a;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.status-filter select:focus {
+  border-color: #43a047;
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.1);
+}
+
+
+/* =========================================================
+   RECORD COUNT
+   ========================================================= */
+
+.record-count {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #edf6ee;
+  color: #2e7d32;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.records-card {
+  overflow: hidden;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e6ebe6;
+  border-radius: 12px;
+  scrollbar-width: thin;
+}
+
+.cultivation-table {
+  width: 100%;
+  min-width: 1100px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+}
+
+.cultivation-table thead th {
+  padding: 14px 15px;
+  border-bottom: 1px solid #dfe6df;
+  background: #f5f8f5;
+  color: #526158;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.cultivation-table thead th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.cultivation-table thead th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.cultivation-table tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #edf0ed;
+  color: #4d5a51;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.cultivation-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.cultivation-table tbody tr:hover {
+  background: #f9fbf9;
+}
+
+.cultivation-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   ID BADGE
+   ========================================================= */
+
+.id-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  padding: 6px 9px;
+  border-radius: 7px;
+  background: #f0f4f1;
+  color: #68756c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CROP CELL
+   ========================================================= */
+
+.crop-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 145px;
+}
+
+.crop-avatar {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #e8f5e9;
+  font-size: 18px;
+}
+
+.crop-cell strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #26332a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.crop-cell small {
+  display: block;
+  color: #8a958d;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.field-name {
+  color: #526158;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-dot {
+  font-size: 8px;
+}
+
+.status-planned {
+  background: #fff8e1;
+  color: #9a7418;
+}
+
+.status-planted {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-growing {
+  background: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-ready {
+  background: #f1f8e9;
+  color: #558b2f;
+}
+
+.status-harvested {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.edit-btn {
+  border-color: #cde5cf;
+  background: #edf7ee;
+  color: #2e7d32;
+}
+
+.edit-btn:hover {
+  background: #dff0e1;
+  border-color: #b9d9bc;
+}
+
+.delete-btn {
+  border-color: #f0cccc;
+  background: #fff3f3;
+  color: #c62828;
+}
+
+.delete-btn:hover {
+  background: #ffe7e7;
+  border-color: #e8b3b3;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  background: #edf6ee;
+  font-size: 34px;
+}
+
+.empty-state h3 {
+  margin: 0 0 7px;
+  color: #354139;
+  font-size: 18px;
+}
+
+.empty-state p {
+  max-width: 430px;
+  margin: 0 0 18px;
+  color: #7d8981;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.empty-clear-btn {
+  min-height: 40px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #2e7d32;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.empty-clear-btn:hover {
+  background: #256b29;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.cultivation-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 5px 3px 20px;
+  color: #7b877e;
+  font-size: 12px;
+}
+
+.cultivation-footer strong {
+  color: #4c5b51;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .cultivation-page {
+    padding: 24px;
+  }
+
+  .cultivation-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .cultivation-hero {
+    padding: 30px;
+  }
+
+  .hero-decoration {
+    padding-right: 5px;
+    font-size: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .cultivation-page {
+    padding: 18px;
+  }
+
+  .cultivation-hero {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .cultivation-hero h1 {
+    font-size: 27px;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .cultivation-card {
+    padding: 21px;
+  }
+
+  .cultivation-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width,
+  .form-actions {
+    grid-column: auto;
+  }
+
+  .filter-controls {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .cultivation-page {
+    padding: 12px;
+  }
+
+  .cultivation-hero {
+    margin-bottom: 18px;
+    padding: 23px 20px;
+    border-radius: 15px;
+  }
+
+  .cultivation-hero-content {
+    gap: 14px;
+  }
+
+  .hero-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+    font-size: 29px;
+  }
+
+  .hero-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .cultivation-hero h1 {
+    font-size: 22px;
+  }
+
+  .cultivation-hero p {
+    font-size: 12px;
+  }
+
+  .cultivation-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .cultivation-stat-card {
+    min-height: 85px;
+    padding: 16px;
+  }
+
+  .stat-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+
+  .stat-info strong {
+    font-size: 22px;
+  }
+
+  .cultivation-card {
+    margin-bottom: 18px;
+    padding: 17px;
+    border-radius: 14px;
+  }
+
+  .card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 17px;
+  }
+
+  .card-title-area {
+    align-items: flex-start;
+  }
+
+  .section-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .card-title-area h2 {
+    font-size: 17px;
+  }
+
+  .card-title-area p {
+    font-size: 12px;
+  }
+
+  .editing-indicator,
+  .record-count {
+    align-self: flex-start;
+  }
+
+  .cultivation-form {
+    gap: 15px;
+  }
+
+  .form-row {
+    gap: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .filter-controls {
+    gap: 13px;
+  }
+
+  .search-box input {
+    font-size: 13px;
+  }
+
+  .table-wrapper {
+    margin: 0 -1px;
+  }
+
+  .cultivation-table {
+    min-width: 1050px;
+  }
+
+  .cultivation-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .cultivation-page {
+    padding: 9px;
+  }
+
+  .cultivation-hero {
+    padding: 20px 16px;
+  }
+
+  .hero-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 25px;
+  }
+
+  .cultivation-hero h1 {
+    font-size: 19px;
+  }
+
+  .cultivation-hero p {
+    font-size: 11px;
+  }
+
+  .cultivation-card {
+    padding: 14px;
+  }
+
+}
+

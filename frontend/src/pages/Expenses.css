@@ -1,0 +1,1415 @@
+/* =========================================================
+   EXPENSE MANAGEMENT
+   Professional UI Styles
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.expenses-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f7f5;
+  color: #26332a;
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.expenses-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  padding: 30px 35px;
+  margin-bottom: 25px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1b5e20 0%,
+      #2e7d32 55%,
+      #43a047 100%
+    );
+
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(46, 125, 50, 0.18);
+}
+
+.expenses-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.expenses-hero-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  font-size: 34px;
+
+  flex-shrink: 0;
+}
+
+.expenses-eyebrow {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  opacity: 0.82;
+}
+
+.expenses-hero h1 {
+  margin: 0 0 7px;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.expenses-hero p {
+  margin: 0;
+
+  font-size: 15px;
+
+  opacity: 0.9;
+}
+
+.expenses-hero-badge {
+  padding: 11px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.expense-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.expense-stat-card {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  min-height: 125px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ece8;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.expense-stat-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 9px 24px rgba(0, 0, 0, 0.08);
+}
+
+.expense-stat-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+.total-card .expense-stat-icon {
+  background: #e8f5e9;
+}
+
+.filtered-card .expense-stat-icon {
+  background: #e3f2fd;
+}
+
+.records-card .expense-stat-icon {
+  background: #fff3e0;
+}
+
+.category-card .expense-stat-icon {
+  background: #f3e5f5;
+}
+
+.expense-stat-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #68736b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.expense-stat-card h2 {
+  margin: 0;
+
+  color: #26332a;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+.expense-stat-card small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #89938c;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   COMMON SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.section-heading-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #e8f5e9;
+
+  font-size: 21px;
+
+  flex-shrink: 0;
+}
+
+.section-heading h2 {
+  margin: 0 0 4px;
+
+  color: #26332a;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 0;
+
+  color: #7a857d;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.expense-form-card {
+  margin-bottom: 25px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ece8;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.expense-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+
+  color: #344039;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.required-mark {
+  margin-left: 4px;
+
+  color: #d32f2f;
+
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  border: 1px solid #d8dfda;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #26332a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #43a047;
+
+  background: #fbfefb;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a2aaa5;
+}
+
+.form-group textarea {
+  resize: vertical;
+
+  min-height: 105px;
+}
+
+.field-hint {
+  margin-top: 6px;
+
+  color: #929b95;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   AMOUNT INPUT
+   ========================================================= */
+
+.amount-input-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.amount-input-wrapper .currency-prefix {
+  position: absolute;
+  left: 13px;
+
+  color: #68736b;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  pointer-events: none;
+}
+
+.amount-input-wrapper input {
+  padding-left: 48px;
+}
+
+/* =========================================================
+   FORM BUTTONS
+   ========================================================= */
+
+.expense-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 5px;
+
+  padding-top: 5px;
+}
+
+.expense-primary-btn,
+.expense-cancel-btn {
+  border: none;
+
+  padding: 12px 21px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.expense-primary-btn {
+  background: #2e7d32;
+
+  color: white;
+
+  box-shadow:
+    0 4px 10px rgba(46, 125, 50, 0.18);
+}
+
+.expense-primary-btn:hover {
+  background: #256b29;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 14px rgba(46, 125, 50, 0.24);
+}
+
+.expense-cancel-btn {
+  background: #757575;
+
+  color: white;
+}
+
+.expense-cancel-btn:hover {
+  background: #616161;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SEARCH & FILTER CARD
+   ========================================================= */
+
+.expense-filter-card {
+  margin-bottom: 25px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ece8;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.expense-filter-controls {
+  display: grid;
+
+  grid-template-columns:
+    minmax(240px, 1.5fr)
+    minmax(170px, 1fr)
+    minmax(170px, 1fr)
+    auto;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.expense-search-wrapper {
+  position: relative;
+}
+
+.expense-search-wrapper input {
+  width: 100%;
+
+  padding: 12px 13px 12px 40px;
+
+  border: 1px solid #d8dfda;
+
+  border-radius: 9px;
+
+  color: #26332a;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.expense-search-wrapper input:focus {
+  border-color: #43a047;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.12);
+}
+
+.expense-search-wrapper input::placeholder {
+  color: #a2aaa5;
+}
+
+.search-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 13px;
+
+  transform: translateY(-50%);
+
+  font-size: 15px;
+
+  pointer-events: none;
+}
+
+.expense-filter-select {
+  width: 100%;
+
+  padding: 12px 13px;
+
+  border: 1px solid #d8dfda;
+
+  border-radius: 9px;
+
+  background: white;
+
+  color: #344039;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.expense-filter-select:focus {
+  border-color: #43a047;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.12);
+}
+
+.expense-reset-btn {
+  padding: 12px 17px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #757575;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.expense-reset-btn:hover {
+  background: #616161;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   FILTER SUMMARY
+   ========================================================= */
+
+.expense-filter-summary {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  padding: 12px 15px;
+
+  border-radius: 9px;
+
+  background: #f5f8f5;
+
+  color: #59645c;
+
+  font-size: 13px;
+}
+
+.filter-result-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #e8f5e9;
+
+  font-size: 15px;
+}
+
+.expense-filter-summary strong {
+  color: #2e7d32;
+}
+
+.expense-filter-summary span {
+  color: #737d76;
+}
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.expense-table-card {
+  margin-bottom: 25px;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7ece8;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 5px;
+}
+
+.table-heading {
+  margin-bottom: 15px;
+}
+
+.table-record-count {
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.expense-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #e5e9e6;
+
+  border-radius: 10px;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.expense-table {
+  width: 100%;
+
+  min-width: 1150px;
+
+  border-collapse: collapse;
+
+  background: #ffffff;
+}
+
+.expense-table thead th {
+  padding: 14px 12px;
+
+  border-bottom: 1px solid #dfe5e1;
+
+  background: #f5f8f5;
+
+  color: #566159;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.expense-table tbody td {
+  padding: 14px 12px;
+
+  border-bottom: 1px solid #edf0ee;
+
+  color: #3e4941;
+
+  font-size: 13px;
+
+  vertical-align: middle;
+}
+
+.expense-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.expense-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.expense-table tbody tr:hover {
+  background: #f9fbf9;
+}
+
+.expense-table tbody tr.editing-row {
+  background: #fffde7;
+}
+
+/* =========================================================
+   TABLE CELLS
+   ========================================================= */
+
+.expense-id {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #f1f3f1;
+
+  color: #667068;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.field-cell {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-weight: 600;
+
+  color: #344039;
+}
+
+.cell-icon {
+  font-size: 14px;
+}
+
+.crop-badge {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 7px;
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.muted-text {
+  color: #9aa39d;
+
+  font-size: 12px;
+}
+
+.description-cell {
+  max-width: 190px;
+
+  overflow: hidden;
+
+  color: #667068;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.amount-cell {
+  color: #2e7d32;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.date-cell {
+  color: #68736b;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   EXPENSE TYPE BADGES
+   ========================================================= */
+
+.expense-type-badge,
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 6px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+/* Fertilizer */
+
+.expense-type-badge.fertilizer {
+  background: #e8f5e9;
+
+  color: #2e7d32;
+}
+
+/* Pesticide */
+
+.expense-type-badge.pesticide {
+  background: #fff3e0;
+
+  color: #ef6c00;
+}
+
+/* Seeds */
+
+.expense-type-badge.seeds {
+  background: #f3e5f5;
+
+  color: #7b1fa2;
+}
+
+/* Labour */
+
+.expense-type-badge.labour {
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+/* Water */
+
+.expense-type-badge.water {
+  background: #e1f5fe;
+
+  color: #0277bd;
+}
+
+/* Transport */
+
+.expense-type-badge.transport {
+  background: #fff8e1;
+
+  color: #f57f17;
+}
+
+/* Equipment */
+
+.expense-type-badge.equipment {
+  background: #eceff1;
+
+  color: #455a64;
+}
+
+/* Other */
+
+.expense-type-badge.other {
+  background: #f5f5f5;
+
+  color: #616161;
+}
+
+/* =========================================================
+   PAYMENT BADGES
+   ========================================================= */
+
+.payment-badge.cash {
+  background: #e8f5e9;
+
+  color: #2e7d32;
+}
+
+.payment-badge.card {
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+.payment-badge.bank-transfer {
+  background: #f3e5f5;
+
+  color: #7b1fa2;
+}
+
+.payment-badge.other {
+  background: #f5f5f5;
+
+  color: #616161;
+}
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.expense-edit-btn,
+.expense-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.expense-edit-btn {
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+.expense-edit-btn:hover {
+  background: #bbdefb;
+
+  transform: translateY(-1px);
+}
+
+.expense-delete-btn {
+  background: #ffebee;
+
+  color: #c62828;
+}
+
+.expense-delete-btn:hover {
+  background: #ffcdd2;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.expense-empty-state {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 55px 20px;
+
+  text-align: center;
+}
+
+.empty-state-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 18px;
+
+  background: #f1f4f1;
+
+  font-size: 30px;
+}
+
+.expense-empty-state h3 {
+  margin: 0 0 7px;
+
+  color: #48534b;
+
+  font-size: 18px;
+}
+
+.expense-empty-state p {
+  max-width: 450px;
+
+  margin: 0 0 18px;
+
+  color: #89928b;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.empty-reset-btn {
+  padding: 10px 17px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2e7d32;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.empty-reset-btn:hover {
+  background: #256b29;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.expenses-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 15px 5px;
+
+  color: #8a948d;
+
+  font-size: 12px;
+}
+
+.expenses-footer > div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.footer-icon {
+  font-size: 15px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .expense-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .expense-filter-controls {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .expense-search-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .expense-reset-btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .expenses-page {
+    padding: 22px;
+  }
+
+  .expenses-hero {
+    padding: 25px;
+  }
+
+  .expenses-hero h1 {
+    font-size: 27px;
+  }
+
+  .expense-form {
+    grid-template-columns:
+      1fr;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+
+  .expense-form-actions {
+    grid-column: auto;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .expenses-page {
+    padding: 15px;
+
+    background: #f4f7f5;
+  }
+
+  /* HERO */
+
+  .expenses-hero {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding: 22px;
+
+    border-radius: 14px;
+  }
+
+  .expenses-hero-content {
+    align-items: flex-start;
+  }
+
+  .expenses-hero-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 14px;
+
+    font-size: 27px;
+  }
+
+  .expenses-hero h1 {
+    font-size: 23px;
+  }
+
+  .expenses-hero p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .expenses-hero-badge {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /* STATS */
+
+  .expense-stats {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .expense-stat-card {
+    min-height: 105px;
+
+    padding: 18px;
+  }
+
+  /* SECTION CARDS */
+
+  .expense-form-card,
+  .expense-filter-card,
+  .expense-table-card {
+    padding: 20px;
+
+    border-radius: 13px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 18px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+
+    line-height: 1.5;
+  }
+
+  /* FORM */
+
+  .expense-form {
+    gap: 16px;
+  }
+
+  .expense-form-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .expense-primary-btn,
+  .expense-cancel-btn {
+    width: 100%;
+  }
+
+  /* FILTER */
+
+  .expense-filter-controls {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .expense-search-wrapper {
+    grid-column: auto;
+  }
+
+  .expense-reset-btn {
+    width: 100%;
+  }
+
+  .expense-filter-summary {
+    align-items: flex-start;
+  }
+
+  /* TABLE HEADER */
+
+  .table-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .table-record-count {
+    align-self: flex-start;
+  }
+
+  /* FOOTER */
+
+  .expenses-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    padding-bottom: 25px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .expenses-page {
+    padding: 10px;
+  }
+
+  .expenses-hero {
+    padding: 18px;
+  }
+
+  .expenses-hero-content {
+    gap: 12px;
+  }
+
+  .expenses-hero-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 23px;
+  }
+
+  .expenses-hero h1 {
+    font-size: 20px;
+  }
+
+  .expenses-hero p {
+    font-size: 12px;
+  }
+
+  .expense-form-card,
+  .expense-filter-card,
+  .expense-table-card {
+    padding: 16px;
+  }
+
+  .expense-stat-card h2 {
+    font-size: 18px;
+  }
+}

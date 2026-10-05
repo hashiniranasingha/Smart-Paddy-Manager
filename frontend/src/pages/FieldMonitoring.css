@@ -1,0 +1,1015 @@
+/* =========================================
+   FIELD MONITORING PAGE
+========================================= */
+
+.monitoring-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f7f4;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.monitoring-hero {
+  background: linear-gradient(
+    135deg,
+    #1b5e20,
+    #2e7d32,
+    #43a047
+  );
+
+  color: white;
+  border-radius: 18px;
+  padding: 30px 34px;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow:
+    0 10px 25px rgba(46, 125, 50, 0.18);
+}
+
+.monitoring-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.monitoring-hero-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  border-radius: 16px;
+
+  font-size: 34px;
+}
+
+.monitoring-hero h1 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.monitoring-hero p {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.monitoring-hero-badge {
+  padding: 10px 16px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.monitoring-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.monitoring-stat-card {
+  background: white;
+
+  border-radius: 14px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.06);
+
+  border: 1px solid #e8eee8;
+}
+
+.monitoring-stat-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+}
+
+.monitoring-stat-icon.total {
+  background: #e8f5e9;
+}
+
+.monitoring-stat-icon.healthy {
+  background: #e8f5e9;
+}
+
+.monitoring-stat-icon.pest {
+  background: #fff3e0;
+}
+
+.monitoring-stat-icon.disease {
+  background: #ffebee;
+}
+
+.monitoring-stat-card span {
+  display: block;
+
+  color: #777;
+
+  font-size: 13px;
+
+  margin-bottom: 4px;
+}
+
+.monitoring-stat-card strong {
+  display: block;
+
+  color: #263238;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.monitoring-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid #e7ece7;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.05);
+
+  box-sizing: border-box;
+}
+
+.monitoring-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.monitoring-card-header h2 {
+  margin: 0 0 5px;
+
+  color: #263238;
+
+  font-size: 20px;
+}
+
+.monitoring-card-header p {
+  margin: 0;
+
+  color: #78909c;
+
+  font-size: 13px;
+}
+
+.editing-badge {
+  background: #fff3e0;
+
+  color: #ef6c00;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.monitoring-form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.monitoring-form-group {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.monitoring-form-group label {
+  color: #37474f;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+.monitoring-form-group label span {
+  color: #d32f2f;
+}
+
+.monitoring-form-group input,
+.monitoring-form-group select,
+.monitoring-form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 13px;
+
+  border: 1px solid #d7ded7;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  color: #263238;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.monitoring-form-group input:focus,
+.monitoring-form-group select:focus,
+.monitoring-form-group textarea:focus {
+  border-color: #43a047;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.1);
+}
+
+.monitoring-form-group textarea {
+  resize: vertical;
+
+  min-height: 100px;
+
+  font-family: inherit;
+}
+
+.monitoring-form-group small {
+  margin-top: 5px;
+
+  text-align: right;
+
+  color: #90a4ae;
+
+  font-size: 11px;
+}
+
+.monitoring-full-width {
+  grid-column: 1 / -1;
+}
+
+.input-with-unit {
+  position: relative;
+}
+
+.input-with-unit input {
+  padding-right: 45px;
+}
+
+.input-with-unit span {
+  position: absolute;
+
+  right: 13px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #78909c;
+
+  font-size: 13px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FORM BUTTONS
+========================================= */
+
+.monitoring-form-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #edf1ed;
+}
+
+.monitoring-primary-button,
+.monitoring-secondary-button {
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 11px 19px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+.monitoring-primary-button {
+  background: #2e7d32;
+
+  color: white;
+}
+
+.monitoring-primary-button:hover {
+  background: #256628;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 4px 10px rgba(46, 125, 50, 0.2);
+}
+
+.monitoring-secondary-button {
+  background: #eceff1;
+
+  color: #455a64;
+}
+
+.monitoring-secondary-button:hover {
+  background: #dfe4e6;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.monitoring-filter-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 1fr)
+    190px
+    200px
+    auto;
+
+  gap: 12px;
+
+  align-items: center;
+}
+
+.monitoring-search-wrapper {
+  position: relative;
+}
+
+.monitoring-search-wrapper input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 13px 11px 40px;
+
+  border: 1px solid #d7ded7;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.monitoring-search-wrapper input:focus {
+  border-color: #43a047;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 160, 71, 0.1);
+}
+
+.monitoring-search-icon {
+  position: absolute;
+
+  left: 13px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #78909c;
+
+  pointer-events: none;
+}
+
+.monitoring-filter-grid select {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #d7ded7;
+
+  border-radius: 8px;
+
+  background: white;
+
+  color: #455a64;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.monitoring-filter-grid select:focus {
+  border-color: #43a047;
+}
+
+.monitoring-reset-button {
+  border: none;
+
+  background: #607d8b;
+
+  color: white;
+
+  padding: 11px 16px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: background 0.2s;
+}
+
+.monitoring-reset-button:hover {
+  background: #455a64;
+}
+
+.monitoring-result-count {
+  color: #78909c;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+.monitoring-result-count strong {
+  color: #2e7d32;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.monitoring-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.monitoring-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 1050px;
+}
+
+.monitoring-table th {
+  background: #f1f5f1;
+
+  color: #455a64;
+
+  text-align: left;
+
+  padding: 14px 12px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.3px;
+
+  border-bottom: 1px solid #dfe7df;
+
+  white-space: nowrap;
+}
+
+.monitoring-table td {
+  padding: 14px 12px;
+
+  color: #455a64;
+
+  font-size: 13px;
+
+  border-bottom: 1px solid #edf1ed;
+
+  vertical-align: middle;
+}
+
+.monitoring-table tbody tr {
+  transition: background 0.2s;
+}
+
+.monitoring-table tbody tr:hover {
+  background: #f8fbf8;
+}
+
+.monitoring-id {
+  color: #78909c;
+
+  font-weight: 600;
+}
+
+.monitoring-crop-cell {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-weight: 600;
+
+  color: #263238;
+}
+
+.crop-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e8f5e9;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+.table-record-count {
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   BADGES
+========================================= */
+
+.monitoring-badge,
+.growth-stage-badge {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* WATER */
+
+.water-low {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.water-normal {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.water-high {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+
+/* PEST */
+
+.pest-no-pest {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.pest-low {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.pest-medium {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.pest-high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+
+/* DISEASE */
+
+.disease-no-disease {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.disease-low {
+  background: #fff8e1;
+  color: #f57f17;
+}
+
+.disease-medium {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.disease-high {
+  background: #ffebee;
+  color: #c62828;
+}
+
+
+/* GROWTH */
+
+.growth-stage-badge {
+  background: #e8eaf6;
+
+  color: #3949ab;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.monitoring-action-buttons {
+  display: flex;
+
+  gap: 6px;
+
+  white-space: nowrap;
+}
+
+.monitoring-edit-button,
+.monitoring-delete-button {
+  border: none;
+
+  padding: 7px 10px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.monitoring-edit-button {
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+.monitoring-edit-button:hover {
+  background: #bbdefb;
+
+  transform: translateY(-1px);
+}
+
+.monitoring-delete-button {
+  background: #ffebee;
+
+  color: #c62828;
+}
+
+.monitoring-delete-button:hover {
+  background: #ffcdd2;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.monitoring-empty-state {
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+.monitoring-empty-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e8f5e9;
+
+  border-radius: 50%;
+
+  font-size: 30px;
+}
+
+.monitoring-empty-state h3 {
+  margin: 0 0 8px;
+
+  color: #37474f;
+
+  font-size: 18px;
+}
+
+.monitoring-empty-state p {
+  margin: 0 0 20px;
+
+  color: #90a4ae;
+
+  font-size: 13px;
+}
+
+.monitoring-empty-button {
+  border: none;
+
+  background: #2e7d32;
+
+  color: white;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.monitoring-empty-button:hover {
+  background: #256628;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .monitoring-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .monitoring-filter-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .monitoring-search-wrapper {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .monitoring-page {
+    padding: 16px;
+  }
+
+  .monitoring-hero {
+    padding: 22px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+  .monitoring-hero-content {
+    gap: 13px;
+  }
+
+  .monitoring-hero-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 26px;
+  }
+
+  .monitoring-hero h1 {
+    font-size: 23px;
+  }
+
+  .monitoring-hero p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .monitoring-hero-badge {
+    font-size: 11px;
+  }
+
+  .monitoring-stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .monitoring-stat-card {
+    padding: 14px;
+
+    gap: 10px;
+  }
+
+  .monitoring-stat-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .monitoring-stat-card strong {
+    font-size: 20px;
+  }
+
+  .monitoring-stat-card span {
+    font-size: 11px;
+  }
+
+  .monitoring-card {
+    padding: 18px;
+  }
+
+  .monitoring-card-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .monitoring-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .monitoring-full-width {
+    grid-column: auto;
+  }
+
+  .monitoring-filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monitoring-search-wrapper {
+    grid-column: auto;
+  }
+
+  .monitoring-result-count {
+    white-space: normal;
+  }
+
+  .monitoring-form-actions {
+    flex-direction: column;
+  }
+
+  .monitoring-primary-button,
+  .monitoring-secondary-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+
+  .monitoring-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .monitoring-hero-content {
+    align-items: flex-start;
+  }
+
+  .monitoring-hero h1 {
+    font-size: 21px;
+  }
+
+}
